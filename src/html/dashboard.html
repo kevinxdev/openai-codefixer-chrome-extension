@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Bootstrap CSS -->
+        <link
+            href="../../libs/bootstrap-5.0.2/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../../libs/codemirror-5.65.2/codemirror.css">
+        <link rel="stylesheet" href="../css/dashboard.css" />
+        <link rel="stylesheet" href="../css/layout.css" />
+        <title>OpenAI Codefixer</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-openai">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../img/openai128.png" alt="OpenAI Logo" width="30" height="30" class="d-inline-block align-text-top" />
+                    OpenAI Codefixer
+                </a>
+            </div>
+        </nav>
+        <div id="dashboard">
+            <div class="container">
+                <div class="row">
+                    <div class="form-group">
+                        <label for="wrong-code">Enter Wrong Code:</label>
+                        <textarea id="wrong-code" name="wrong-code" autofocus="autofocus"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label for="lang">Select Language</label>
+                        <select class="form-control" id="lang" name="lang">
+                            <option value="Python">Python</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="HTML">HTML</option>
+                            <option value="CSS">CSS</option>
+                            <option value="XML">XML</option>
+                            <option value="Java">Java</option>
+                            <option value="C">C</option>
+                            <option value="C++">C++</option>
+                            <option value="C#">C#</option>
+                            <option value="Visual Basic">Visual Basic</option>
+                            <option value="PHP">PHP</option>
+                            <option value="SQL">SQL</option>
+                            <option value="Assembly language">Assembly language</option>
+                            <option value="R">R</option>
+                            <option value="Groovy">Groovy</option>
+                            <option value="TypeScript">TypeScript</option>
+                            <option value="Bash">Bash</option>
+                            <option value="Batch">Batch</option>
+                            <option value="Kotlin">Kotlin</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row" style="margin: 10px;">
+                    <button type="button" class="btn btn-danger btn-lg invisible" id="fix-code-button">Fix Code</button>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <textarea id="fixed-code" name="fixed-code" class="invisible" readonly></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="../../libs/codemirror-5.65.2/codemirror.js"></script>
+    <script src="../../libs/codemirror-5.65.2/mode/javascript/javascript.js"></script>
+    <script src="../js/dashboard.js"></script>
+</html>
