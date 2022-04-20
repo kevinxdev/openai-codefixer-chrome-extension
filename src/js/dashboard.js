@@ -29,8 +29,7 @@ fixCodeButton.addEventListener("click", function () {
             matchBrackets: true,
             readOnly: 'nocursor',
         });
-        // should be replaced with code-davinci-002
-        const url = "https://api.openai.com/v1/engines/text-davinci-002/completions"
+        const url = "https://api.openai.com/v1/engines/code-davinci-002/completions"
         let xmlHttpRequest = new XMLHttpRequest();
         xmlHttpRequest.open("post", url, false);
         xmlHttpRequest.setRequestHeader('Authorization', `Bearer ${openaiApiKey}`);
@@ -41,8 +40,8 @@ fixCodeButton.addEventListener("click", function () {
             "temperature": parseInt(openaiTemperature),
             "max_tokens": parseInt(openaiMaxTokens),
             "top_p": parseInt(openaiTopP),
-            //"frequency_penality": parseInt(openaiFrequencyPenality),
-            //"presence_penality": parseInt(openaiPresencePenality),
+            "frequency_penality": parseInt(openaiFrequencyPenality),
+            "presence_penality": parseInt(openaiPresencePenality),
             "stop": ["###"]
         };
         xmlHttpRequest.onload  = function() {
