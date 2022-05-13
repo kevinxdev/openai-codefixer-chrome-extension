@@ -53,10 +53,8 @@ fixCodeButton.addEventListener("click", function () {
         xmlHttpRequest.send(JSON.stringify(data));
 
         copyCodeWrap.addEventListener("click", function () {
-            console.log("test");
             // write the text to the clipboard
             const copyText = fixedCodeTextareaCodeMirror.getValue();
-            console.log(copyText);
             navigator.clipboard.writeText(copyText);
         
             // animate the button
