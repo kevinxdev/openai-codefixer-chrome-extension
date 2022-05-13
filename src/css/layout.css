@@ -1,0 +1,10 @@
+.navbar-openai {
+    background-color: #000;
+}
+.navbar-openai a {
+    color: #fff;
+    font-weight: bold;
+}
+.invisible {
+    display: none;
+}
