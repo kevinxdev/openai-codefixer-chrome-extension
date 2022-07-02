@@ -29,11 +29,13 @@ chrome.storage.sync.get(["openaitemperature", "openaimaxtokens", "openaitopp", "
     openaiPresencePenality.value = data.openaipresencepenality;
 });
 
+// grepper javascript chrome storage sync set value
 chrome.storage.sync.get("openaiapikey", function (data) {
     if (data.openaiapikey) {
         openaiApiKey.value = data.openaiapikey;
     }
 });
+// end grepper
 
 openaiApiKey.addEventListener("input", function () {
     chrome.storage.sync.set({"openaiapikey": this.value});
